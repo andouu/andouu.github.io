@@ -25,7 +25,7 @@ function App() {
   const content = getContentMemoized();
 
   return (
-    <div className={[globalClasses.centerItems]}>
+    <div className={[globalClasses['center-items']]}>
       <div className='App'>
         <div className='Nav'>
           <div id='bio'>

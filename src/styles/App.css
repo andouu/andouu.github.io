@@ -10,7 +10,7 @@
 .Nav {
   display: flex;
   flex-direction: column;
-  flex-basis: 33%;
+  flex-basis: 33.3%;
   justify-content: flex-start;
   box-sizing: border-box;
   padding-top: 1.5rem;
@@ -21,7 +21,7 @@
 
 .Main {
   position: relative;
-  flex: 4;
+  flex-basis: 66.6%;
   box-sizing: border-box;
   padding-top: 1.5rem;
 }

@@ -9,7 +9,7 @@ export default function HomePage(props) {
       Hi, I'm Andrew! I am currently a highschool student attending Interlake High School as part of the
       gifted International Baccalaureate (IB) program. Below are the subjects that I studied for the IB program:
       <ul className={pageClasses.indented}>
-        <li>Higher Level Physics</li>
+        <li>Higher Level Physics 2</li>
         <li>Higher Level Math, Analysis and Approaches 2</li>
         <li>Higher Level English Lang Lit 2</li>
         <li>Higher Level Music</li>
