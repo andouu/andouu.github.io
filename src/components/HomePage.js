@@ -13,7 +13,7 @@ export default function HomePage(props) {
         <li>Higher Level Math, Analysis and Approaches 2</li>
         <li>Higher Level English Lang Lit 2</li>
         <li>Higher Level Music</li>
-        <li>Standard Level Hisotry</li>
+        <li>Standard Level History</li>
         <li>Standard Level Chinese</li>
       </ul>
       <br />

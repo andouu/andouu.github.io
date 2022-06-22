@@ -8,11 +8,13 @@ import SocialsBar from './components/SocialsBar';
 function App() {
   const [pageName, setPageName] = React.useState(HOME_PAGE);
   const [prevPageName, setPrevPageName] = React.useState(null);
+  const [showPrevPage, setShowPrevPage] = React.useState(false);
   
   const handleChangePage = React.useCallback((name) => {
     if (!pages.includes(name)) {
       return;
     }
+    setShowPrevPage(true);
     setPrevPageName(pageName);
     setPageName(name);
   }, [pageName]);
@@ -32,7 +34,7 @@ function App() {
             <img id='pfp' src={pfp} alt='Me' onClick={(e) => { e.preventDefault(); handleChangePage(HOME_PAGE); }} />
             <div>
               <p id='name'>Andrew Zhou</p>
-              <p>Student, Software Developer</p>
+              <p id='description'>Student, Software Developer</p>
             </div>
           </div>
           <SocialsBar />
@@ -43,7 +45,7 @@ function App() {
           <span id='copyright'>2022 &copy; All Rights Reserved.</span>
         </div>
         <div className='Main'>
-        {prevPageName && <FadeAwayPage name={prevPageName} />}
+        {prevPageName && showPrevPage && <FadeAwayPage name={prevPageName} onAnimationEnd={() => setShowPrevPage(false)} />}
           {content}
         </div>
       </div>

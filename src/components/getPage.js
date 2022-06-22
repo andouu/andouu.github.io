@@ -30,11 +30,11 @@ export function getPage(pageName) {
 }
 
 export function FadeAwayPage(props) {
-  const { name } = props;
+  const { name, onAnimationEnd } = props;
   const page = getPage(name);
 
   return (
-    <div key={Math.random()} className='fade-page Main'>
+    <div key={Math.random()} className='fade-page Main' onAnimationEnd={onAnimationEnd}>
       {page}
     </div>
   );
