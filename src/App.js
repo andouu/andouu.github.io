@@ -1,25 +1,72 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import './styles/App.css';
+import globalClasses from './styles/global.module.css';
+import pfp from './assets/images/pfp.jpg';
+import { HOME_PAGE, pages, getPage, FadeAwayPage } from './components/getPage';
+import SocialsBar from './components/SocialsBar';
 
 function App() {
+  const [pageName, setPageName] = React.useState(HOME_PAGE);
+  const [prevPageName, setPrevPageName] = React.useState(null);
+  
+  const handleChangePage = React.useCallback((name) => {
+    if (!pages.includes(name)) {
+      return;
+    }
+    setPrevPageName(pageName);
+    setPageName(name);
+  }, [pageName]);
+
+  const navButtons = pages.map((page, index) => {
+    return <NavButton key={index} name={page} selected={page === pageName} handleChangePage={handleChangePage} />
+  });
+
+  const getContentMemoized = React.useCallback(() => getPage(pageName), [pageName]);
+  const content = getContentMemoized();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={[globalClasses.centerItems]}>
+      <div className='App'>
+        <div className='Nav'>
+          <div id='bio'>
+            <img id='pfp' src={pfp} alt='Me' onClick={(e) => { e.preventDefault(); handleChangePage(HOME_PAGE); }} />
+            <div>
+              <p id='name'>Andrew Zhou</p>
+              <p>Student, Software Developer</p>
+            </div>
+          </div>
+          <SocialsBar />
+          <h1 id='toc-text'>Table of Contents:</h1>
+          <ul id='menu'>
+            {navButtons}
+          </ul>
+          <span id='copyright'>2022 &copy; All Rights Reserved.</span>
+        </div>
+        <div className='Main'>
+        {prevPageName && <FadeAwayPage name={prevPageName} />}
+          {content}
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+function NavButton(props) {
+  const { name, selected, handleChangePage } = props;
+
+  return (
+    <li>
+      <a 
+        href="#bio" 
+        onClick={(e) => {
+          e.preventDefault();
+          handleChangePage(name);
+        }}
+        style={{ marginLeft: selected ? '0.75rem' : undefined, color: selected ? 'black' : 'gray' }}>
+          {name}
+        </a>
+      </li>
+  );
+};
 
 export default App;
