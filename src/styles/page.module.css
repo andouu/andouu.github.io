@@ -10,3 +10,61 @@
 .paper-container {
   margin-bottom: 1.5rem;
 }
+
+.button-row {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 2rem;
+  box-sizing: border-box;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-right: 1.5rem;
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: gray;
+  border-color: gray;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 9999px;
+  transition: all 0.25s;
+}
+.button:hover {
+  border-color: dodgerblue;
+  color: dodgerblue;
+}
+
+.showcase {
+  box-sizing: border-box;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+.showcase .title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.showcase .link {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  color: gray;
+  transition: all 0.25s;
+}
+.showcase .link:hover {
+  color: dodgerblue;
+}
+.showcase .description {
+  font-size: 0.8rem;
+}

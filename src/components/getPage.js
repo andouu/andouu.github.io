@@ -4,11 +4,11 @@ import SoftwarePage from './SoftwarePage';
 import AboutPage from './AboutPage';
 import ContactPage from './ContactPage';
 
-export const HOME_PAGE = 'Home';
-export const RESEARCH_PAGE = 'Research';
-export const SOFTWARE_PAGE = 'Software';
-export const CONTACT_PAGE = 'Contact';
-export const ABOUT_PAGE = 'About Me';
+export const HOME_PAGE = '🏠 Home';
+export const RESEARCH_PAGE = '🔬 Research';
+export const SOFTWARE_PAGE = '💻 Software';
+export const CONTACT_PAGE = '📝 Contact';
+export const ABOUT_PAGE = '👋 About Me';
 
 export const pages = [HOME_PAGE, RESEARCH_PAGE, SOFTWARE_PAGE, CONTACT_PAGE, ABOUT_PAGE];
 

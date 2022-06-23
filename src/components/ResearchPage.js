@@ -10,7 +10,7 @@ export default function ResearchPage(props) {
   return (
     <Page name={name}>
       Throughout the IB program, students must write numerous analytical papers, in which they independently research and report their findings.
-      Attached below are various papers I've written for different subjects:
+      Displayed below are various papers I've written for different subjects:
       <br />
       <br />
       <Paper subject='Higher Level Physics 2' link={PhysicsII}>
@@ -23,7 +23,7 @@ export default function ResearchPage(props) {
         </video>
       </Paper>
       <Paper subject='Connect 4 Solver Comparision' link={EE}>
-        A computer science extended essay exploring how different optimizations to a Connect 4 solver increases its efficiency, pruning millions of unnecessary searches.
+        A computer science extended essay (EE) exploring how different optimizations to a Connect 4 solver increases its efficiency, pruning millions of unnecessary searches.
       </Paper>
     </Page>
   );

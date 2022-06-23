@@ -13,7 +13,7 @@ export default function AboutPage(props) {
         <li>Higher Level Math, Analysis and Approaches 2</li>
         <li>Higher Level English Lang Lit 2</li>
         <li>Higher Level Music</li>
-        <li>Standard Level Hisotry</li>
+        <li>Standard Level History</li>
         <li>Standard Level Chinese</li>
       </ul>
       <br />
@@ -24,7 +24,8 @@ export default function AboutPage(props) {
       I aspire to become a software engineer in the future, developing products that everyone around the world can enjoy, while making lives easier.
       <br />
       <br />
-      <b>I'm actively looking for internship opportunities!</b> You can find my resume <a href={Resume} rel='noreferrer' target='_blank'>here.</a>
+      <strong>I'm actively looking for internship opportunities!</strong> You can find my contact information in the <strong>Contact</strong> section and
+      take a look at my resume <a href={Resume} rel='noreferrer' target='_blank'>here.</a>
     </Page>
   );
 };

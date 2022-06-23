@@ -64,7 +64,11 @@ function NavButton(props) {
           e.preventDefault();
           handleChangePage(name);
         }}
-        style={{ marginLeft: selected ? '0.75rem' : undefined, color: selected ? 'black' : 'gray' }}>
+        style={{
+          marginLeft: selected ? '0.75rem' : undefined,
+          fontWeight: selected ? 700 : undefined,
+          color: selected ? 'black' : 'gray'
+        }}>
           {name}
         </a>
       </li>
