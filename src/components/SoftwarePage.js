@@ -20,7 +20,7 @@ export default function SoftwarePage(props) {
           Newly added assignments are notified to the app so that students no longer need to constantly
           stress over and check the grade book every few minutes.
         </Showcase>
-        <Showcase name='Toss-It' role='Project Co-Lead, Full Stack Developer'>
+        <Showcase name='Toss-It' role='Project Co-Lead, Full Stack Developer' link='https://www.tossit.app'>
           Toss-It is a real-time online quizzing game in which the teacher doesn't quiz the students,
           but the students quiz each other. With a variety of engaging and fun quiz options, Toss-It
           promotes active and enjoyable learning!
